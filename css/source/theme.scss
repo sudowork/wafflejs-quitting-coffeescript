@@ -49,6 +49,17 @@ section.has-light-background {
 	}
 }
 
+.reveal::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-image: url(../img/wmo.png);
+  background-size: 10%;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+}
+
 // Theme template ------------------------------
 @import "../../bower_components/reveal.js/css/theme/template/theme";
 // ---------------------------------------------
