@@ -81,6 +81,11 @@ section.has-light-background {
   vertical-align: middle;
 }
 
+.reveal .slides img {
+  border: none;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
 // Theme template ------------------------------
 @import "../../bower_components/reveal.js/css/theme/template/theme";
 // ---------------------------------------------
