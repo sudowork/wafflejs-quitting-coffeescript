@@ -24,13 +24,13 @@ note:
 
 ===
 
-![Slack CoffeeFox](img/slides/coffeefox.png)
+![Slack CoffeeFox](resources/img/slides/coffeefox.png)
 
 ===
 
 # ☕️ ➡️ 👩🏽‍💻 ➡️ 📄
 
-![Urban Dictionary Definition of a Programmer](img/slides/urban-dictionary-programmer.png)
+![Urban Dictionary Definition of a Programmer](resources/img/slides/urban-dictionary-programmer.png)
 
 ===
 
