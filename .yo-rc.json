@@ -1,0 +1,10 @@
+{
+  "generator-reveal": {
+    "presentationTitle": "Quitting Coffee(Script)",
+    "packageVersion": "0.0.0",
+    "useSass": true,
+    "deployToGithubPages": true,
+    "githubUsername": "sudowork",
+    "githubRepository": "wafflejs-quitting-coffeescript"
+  }
+}
