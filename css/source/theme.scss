@@ -62,7 +62,7 @@ section.has-light-background {
   background-size: 10%;
   background-repeat: no-repeat;
   // Position and flip so the waffle is facing the right direction
-  background-position: 100% 100%;
+  background-position: calc(100% - 0.5em) calc(100% - 0.5em);
   transform: scaleX(-1);
 }
 
