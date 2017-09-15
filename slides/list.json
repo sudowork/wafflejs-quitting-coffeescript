@@ -1,1 +1,10 @@
-["index.md"]
+[
+    "index.md",
+    {
+        "filename": "caffeine-intake.md",
+        "attr": {
+            "data-separator": "^\n===\n",
+            "data-separator-vertical": "^\n---\n"
+        }
+    }
+]
