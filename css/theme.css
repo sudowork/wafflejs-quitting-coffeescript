@@ -15,7 +15,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   background-image: url(../resources/img/wmo.png);
   background-size: 10%;
   background-repeat: no-repeat;
-  background-position: 100% 100%;
+  background-position: calc(100% - 0.5em) calc(100% - 0.5em);
   transform: scaleX(-1); }
 
 .reveal a:hover {
