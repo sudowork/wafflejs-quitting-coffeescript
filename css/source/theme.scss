@@ -74,6 +74,13 @@ section.has-light-background {
   color: $linkColorActive;
 }
 
+.reveal span.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+}
+
 // Theme template ------------------------------
 @import "../../bower_components/reveal.js/css/theme/template/theme";
 // ---------------------------------------------
