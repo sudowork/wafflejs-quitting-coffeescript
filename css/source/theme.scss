@@ -86,6 +86,12 @@ section.has-light-background {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
 
+body .reveal .progress {
+  top: 0 !important;
+  height: 5px;
+  background-color: lighten($orange, 35%);
+}
+
 // Theme template ------------------------------
 @import "../../bower_components/reveal.js/css/theme/template/theme";
 // ---------------------------------------------
