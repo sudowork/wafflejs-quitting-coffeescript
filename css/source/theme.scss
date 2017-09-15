@@ -19,13 +19,16 @@
 // Include theme-specific fonts
 @import url(../bower_components/reveal.js/lib/font/source-sans-pro/source-sans-pro.css);
 
+// WaffleJS colors
+$orange: hsl(10, 98%, 58%);
+$tan: hsl(48, 100%, 98%);
+$gray: hsl(0, 0%, 40%);
 
 // Override theme settings (see ../../bower_components/reveal.js/css/theme/template/settings.scss)
-$backgroundColor: #fffdf5;
+$backgroundColor: $tan;
 
-$mainColor: #000;
-$highlightColor: #fd4e2b;
-$headingColor: $highlightColor;
+$mainColor: $gray;
+$headingColor: $orange;
 
 $mainFontSize: 38px;
 $mainFont: 'Source Sans Pro', Helvetica, sans-serif;
@@ -34,9 +37,10 @@ $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: normal;
 $headingFontWeight: 600;
-$linkColor: #42affa;
-$linkColorHover: lighten( $linkColor, 15% );
-$selectionBackgroundColor: lighten( $linkColor, 25% );
+$linkColor: $orange;
+$linkColorHover: $orange;
+$linkColorActive: lighten($orange, 15%);
+$selectionBackgroundColor: lighten($linkColor, 25%);
 
 $heading1Size: 2.5em;
 $heading2Size: 1.6em;
@@ -60,6 +64,14 @@ section.has-light-background {
   // Position and flip so the waffle is facing the right direction
   background-position: 100% 100%;
   transform: scaleX(-1);
+}
+
+.reveal a:hover {
+  text-decoration: underline;
+}
+
+.reveal a:active {
+  color: $linkColorActive;
 }
 
 // Theme template ------------------------------
