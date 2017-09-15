@@ -24,7 +24,8 @@
 $backgroundColor: #fffdf5;
 
 $mainColor: #000;
-$headingColor: #fd4e2b;
+$highlightColor: #fd4e2b;
+$headingColor: $highlightColor;
 
 $mainFontSize: 38px;
 $mainFont: 'Source Sans Pro', Helvetica, sans-serif;
