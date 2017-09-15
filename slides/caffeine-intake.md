@@ -19,3 +19,7 @@ note:
 ---
 
 # ☕️☕️☕️☕️☕️?
+
+===
+
+![Slack CoffeeFox](img/slides/coffeefox.png)
