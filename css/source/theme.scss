@@ -57,7 +57,9 @@ section.has-light-background {
   background-image: url(../img/wmo.png);
   background-size: 10%;
   background-repeat: no-repeat;
-  background-position: 0 100%;
+  // Position and flip so the waffle is facing the right direction
+  background-position: 100% 100%;
+  transform: scaleX(-1);
 }
 
 // Theme template ------------------------------
