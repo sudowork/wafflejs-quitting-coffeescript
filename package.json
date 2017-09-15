@@ -24,6 +24,7 @@
     "url": "git@github.com:sudowork/wafflejs-quitting-coffeescript.git"
   },
   "scripts": {
+    "slide": "yo reveal:slide",
     "serve": "grunt serve",
     "deploy": "grunt deploy",
     "test": "grunt test"
