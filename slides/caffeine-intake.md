@@ -42,7 +42,7 @@ note:
 
 ===
 
-# My Caffeine Consumption
+## My Caffeine Consumption
 
 TODO: Chart of Caffeine Consumption
 
