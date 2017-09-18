@@ -2,6 +2,8 @@
 
 A talk for the WaffleJS October 2017 meetup.
 
+![WaffleJS Logo](resources/img/wmo.png)
+
 ## Description
 
 Coffee is an essential part of many developers’ lives, but sometimes we need to cut back.
