@@ -92,6 +92,10 @@ body .reveal .progress {
   background-color: lighten($orange, 35%);
 }
 
+.horizontal-flip {
+  transform: scaleX(-1);
+}
+
 // Theme template ------------------------------
 @import "../../bower_components/reveal.js/css/theme/template/theme";
 // ---------------------------------------------
