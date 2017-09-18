@@ -39,6 +39,9 @@ body .reveal .progress {
   height: 5px;
   background-color: #ffe1dc; }
 
+.horizontal-flip {
+  transform: scaleX(-1); }
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/

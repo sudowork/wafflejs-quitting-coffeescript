@@ -6,5 +6,12 @@
             "data-separator": "^\n===\n",
             "data-separator-vertical": "^\n---\n"
         }
+    },
+    {
+        "filename": "coffeescript.md",
+        "attr": {
+            "data-separator": "^\n===\n",
+            "data-separator-vertical": "^\n---\n"
+        }
     }
 ]
