@@ -58,7 +58,6 @@ class FooSearchService extends AbstractService
 ---
 
 <h3 class="horizontal-flip">🍭🍩🍪🍫🍬🌈🤢</h3>
-### Sugar Overload
 
 ```coffeescript
 {mapLimit} = require('async')
