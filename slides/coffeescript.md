@@ -1,4 +1,8 @@
-## CoffeeScript Overview
+# CoffeeScript
+
+===
+
+## What is CoffeeScript?
 
 - Language that compiles into JavaScript
 - Smooths over ["The Bad Parts"](https://arcturo.github.io/library/coffeescript/07_the_bad_parts.html) of JavaScript
