@@ -22,7 +22,7 @@ bower install
 ## Development
 
 ```shell
-yarn serve  # Starts the development server with live-reload
+yarn start  # Starts the development server with live-reload
 yarn deploy # Compiles presentation and deploys to GitHub Pages
 yarn test   # Lints files
 
