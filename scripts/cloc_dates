@@ -1,0 +1,33 @@
+#!/bin/sh
+
+if [[ $# -lt 3 ]]; then
+  echo "Usage: $(basename "$0") repo from_date to_date [cloc_args...]"
+  exit 1;
+fi
+
+repo="$1"; shift
+from_date_ts=$(date -j -f "%Y-%m-%d" $1 "+%s"); shift
+to_date_ts=$(date -j -f "%Y-%m-%d" $1 "+%s"); shift
+offset=86400
+
+date_ts="$from_date_ts"
+dates=()
+while [ "$date_ts" -lt "$to_date_ts" ]; do
+  dates+=($(date -j -f "%s" $date_ts "+%Y-%m-%d"))
+  date_ts=$(($date_ts + $offset))
+done
+
+cd $repo
+echo "Date\tLanguage\tfiles\tblank\tcomment\tcode"
+for date in "${dates[@]}"; do
+  rev="$(git rev-list -n 1 --before="$date" master)"
+  echo "Checking out $date ($rev)" >& 2
+  git checkout "$rev" >& 2
+
+  cloc_cmd="cloc --vcs=git $@"
+  echo "Running \`$cloc_cmd\`" >& 2
+
+  cloc_output="$($cloc_cmd)"
+  echo "$date\t$(echo "$cloc_output" | grep JavaScript | tr -s " " "\t")"
+  echo "$date\t$(echo "$cloc_output" | grep CoffeeScript | tr -s " " "\t")"
+done
