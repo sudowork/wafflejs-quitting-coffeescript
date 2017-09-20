@@ -1,4 +1,11 @@
-## CoffeeScript Overview
+# CoffeeScript
+
+note:
+- Before going into how to get rid of it
+
+===
+
+## What is CoffeeScript?
 
 - Language that compiles into JavaScript
 - Smooths over ["The Bad Parts"](https://arcturo.github.io/library/coffeescript/07_the_bad_parts.html) of JavaScript
@@ -58,7 +65,6 @@ class FooSearchService extends AbstractService
 ---
 
 <h3 class="horizontal-flip">🍭🍩🍪🍫🍬🌈🤢</h3>
-### Sugar Overload
 
 ```coffeescript
 {mapLimit} = require('async')

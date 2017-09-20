@@ -52,7 +52,7 @@ TODO: Chart of Caffeine Consumption
 
 ===
 
-# Something Had to Change
+## Something Had to Change
 
 note:
 - Weighing my choices: changing my ways vs converting entire CoffeeScript codebase

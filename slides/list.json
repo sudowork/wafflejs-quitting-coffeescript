@@ -13,5 +13,12 @@
             "data-separator": "^\n===\n",
             "data-separator-vertical": "^\n---\n"
         }
+    },
+    {
+        "filename": "why-switch.md",
+        "attr": {
+            "data-separator": "^\n===\n",
+            "data-separator-vertical": "^\n---\n"
+        }
     }
 ]
