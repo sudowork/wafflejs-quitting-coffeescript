@@ -1,5 +1,8 @@
 # CoffeeScript
 
+note:
+- Before going into how to get rid of it
+
 ===
 
 ## What is CoffeeScript?
