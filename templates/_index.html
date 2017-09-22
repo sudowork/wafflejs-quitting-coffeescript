@@ -31,6 +31,21 @@
         <!--[if lt IE 9]>
         <script src="bower_components/reveal.js/lib/js/html5shiv.js"></script>
         <![endif]-->
+
+        <script>
+            (function() {
+                window.onLoad = function(callback) {
+                    if (isAlreadyLoaded()) {
+                        setTimeout(callback, 0);
+                    } else {
+                        window.addEventListener('load', callback);
+                    }
+                };
+                function isAlreadyLoaded() {
+                    return document.readyState === 'complete';
+                }
+            }());
+        </script>
     </head>
 
     <body>
