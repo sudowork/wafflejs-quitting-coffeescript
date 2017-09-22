@@ -44,7 +44,13 @@ note:
 
 ## My Caffeine Consumption
 
-TODO: Chart of Caffeine Consumption
+<div id="chart-caffeine-consumption"></div>
+
+note:
+- Strong, Neg correl \[caffeine : energy levels next day\] (-0.46)
+- Neg correl \[caffeine : sleep that night\] (-0.27)
+- Pos correl \[sleep : energy that day\] (0.20)
+- Weaker Pos \[energy : caffeine\] (0.14)
 
 ===
 
