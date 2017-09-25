@@ -1,49 +1,53 @@
+/* global Highcharts, onLoad */
+
+'use strict';
+
 const DATE_REGEX = /\d{4}-\d{2}-\d{2}/;
 const CAFFEINE_PER_CUP = 95;
 const HC_ELEMENTARY_THEME = {
-  "colors": [
-    "#FA8832",
-    "#41B5E9",
-    "#34393C",
-    "#E46151"
+  colors: [
+    '#FA8832',
+    '#41B5E9',
+    '#34393C',
+    '#E46151',
   ],
-  "chart": {
-    "style": {
-      "color": "#333",
-      "fontFamily": "Open Sans"
-    }
+  chart: {
+    style: {
+      color: '#333',
+      fontFamily: 'Open Sans',
+    },
   },
-  "title": {
-    "style": {
-      "fontFamily": "Raleway",
-      "fontWeight": "100"
-    }
+  title: {
+    style: {
+      fontFamily: 'Raleway',
+      fontWeight: '100',
+    },
   },
-  "subtitle": {
-    "style": {
-      "fontFamily": "Raleway",
-      "fontWeight": "100"
-    }
+  subtitle: {
+    style: {
+      fontFamily: 'Raleway',
+      fontWeight: '100',
+    },
   },
-  "legend": {
-    "align": "right",
-    "verticalAlign": "bottom"
+  legend: {
+    align: 'right',
+    verticalAlign: 'bottom',
   },
-  "xAxis": {
-    "gridLineWidth": 1,
-    "gridLineColor": "#F3F3F3",
-    "lineColor": "#F3F3F3",
-    "minorGridLineColor": "#F3F3F3",
-    "tickColor": "#F3F3F3",
-    "tickWidth": 1
+  xAxis: {
+    gridLineWidth: 1,
+    gridLineColor: '#F3F3F3',
+    lineColor: '#F3F3F3',
+    minorGridLineColor: '#F3F3F3',
+    tickColor: '#F3F3F3',
+    tickWidth: 1,
   },
-  "yAxis": {
-    "gridLineColor": "#F3F3F3",
-    "lineColor": "#F3F3F3",
-    "minorGridLineColor": "#F3F3F3",
-    "tickColor": "#F3F3F3",
-    "tickWidth": 1
-  }
+  yAxis: {
+    gridLineColor: '#F3F3F3',
+    lineColor: '#F3F3F3',
+    minorGridLineColor: '#F3F3F3',
+    tickColor: '#F3F3F3',
+    tickWidth: 1,
+  },
 };
 
 function useTheme(theme) {
@@ -52,6 +56,7 @@ function useTheme(theme) {
 }
 
 function initCaffeineConsumptionChart() {
+  /* eslint-disable no-tabs */
   const data = parseSeparatedValues(`
     Date	Energy	Sleep (hours)	Total Caffeine (mg)
     2017-09-06		5.43
@@ -69,13 +74,16 @@ function initCaffeineConsumptionChart() {
     2017-09-18	6	6.33	552
     2017-09-19	5	5.43	841
   `);
+  /* eslint-enable no-tabs */
   const dates = getSeries(data, 'Date');
-  const caffeine = getSeries(data, 'Total Caffeine (mg)');
-  const cupsOfCoffee = caffeine.map(caffeine => Math.round(caffeine * 100 / CAFFEINE_PER_CUP) / 100);
+  const totalCaffeine = getSeries(data, 'Total Caffeine (mg)');
+  const cupsOfCoffee = totalCaffeine.map(caffeine =>
+    Math.round((caffeine * 100) / CAFFEINE_PER_CUP) / 100
+  );
   const sleep = getSeries(data, 'Sleep (hours)');
   const energy = getSeries(data, 'Energy');
 
-  const myChart = Highcharts.chart('chart-caffeine-consumption', {
+  Highcharts.chart('chart-caffeine-consumption', {
     chart: {
       type: 'xy',
     },
@@ -87,7 +95,7 @@ function initCaffeineConsumptionChart() {
     yAxis: [
       {
         title: {
-          text: 'Caffeine Consumption'
+          text: 'Caffeine Consumption',
         },
         labels: {
           format: '{value} ☕️',
@@ -95,14 +103,14 @@ function initCaffeineConsumptionChart() {
       },
       {
         title: {
-          text: 'Energy'
+          text: 'Energy',
         },
         opposite: true,
         max: 10,
       },
       {
         title: {
-          text: 'Sleep (hours)'
+          text: 'Sleep (hours)',
         },
         opposite: true,
         max: 12,
@@ -144,10 +152,11 @@ function parseSeparatedValues(data, delimiter = '\t') {
     .filter(line => line.length > 0);
   const [headerLine, ...dataLines] = lines;
   const headers = headerLine.split(delimiter);
-  const getRowFromLine = line => {
+  const getRowFromLine = (line) => {
     const values = line.split(delimiter);
     return headers.reduce(
       (row, header, i) => {
+        // eslint-disable-next-line no-param-reassign
         row[headers[i]] = parseValue(values[i]);
         return row;
       },
@@ -163,7 +172,7 @@ function parseValue(value) {
   // special case for dates :(
   if (DATE_REGEX.test(value)) return value;
   const floatValue = parseFloat(value);
-  return isNaN(floatValue)
+  return Number.isNaN(floatValue)
     ? null
     : floatValue;
 }
