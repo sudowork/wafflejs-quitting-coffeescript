@@ -4,7 +4,7 @@
 (function initCharts() {
   'use strict';
 
-  const DATE_REGEX = /\d{4}-\d{2}-\d{2}/;
+  const FLOAT_REGEX = /^(?:[-+])?(?:[0-9]+)?(?:\.[0-9]*)?(?:[eE][+-]?(?:[0-9]+))?$/;
   const CAFFEINE_PER_CUP = 95;
   const HC_ELEMENTARY_THEME = {
     colors: [
@@ -171,8 +171,7 @@
 
   function parseValue(value) {
     if (!value) return null;
-    // special case for dates :(
-    if (DATE_REGEX.test(value)) return value;
+    if (!FLOAT_REGEX.test(value)) return value;
     const floatValue = parseFloat(value);
     return Number.isNaN(floatValue)
       ? null
