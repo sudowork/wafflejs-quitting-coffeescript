@@ -22,6 +22,5 @@ module.exports = {
       classes: false,
       variables: true,
     }],
-    strict: ['error', 'global'],
   },
 };
