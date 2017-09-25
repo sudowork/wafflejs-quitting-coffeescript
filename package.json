@@ -4,6 +4,9 @@
   "private": true,
   "devDependencies": {
     "coffeelint": "^1.16.0",
+    "eslint": "^4.6.0",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0",
     "generator-reveal": "^1.0.0",
     "grunt": "^1.0.0",
     "grunt-build-control": "^0.7.1",
