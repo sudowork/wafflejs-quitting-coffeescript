@@ -32,6 +32,10 @@
     "start": "grunt",
     "slide": "gen(){ yo reveal:slide \"$@\" --markdown; };gen",
     "deploy": "grunt deploy",
-    "test": "grunt test"
+    "lint": "eslint",
+    "lint:all": "eslint .",
+    "test": "grunt test",
+    "precommit": "lint-staged",
+    "prepush": "npm run test"
   }
 }
