@@ -16,6 +16,8 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-eslint": "^20.1.0",
     "grunt-sass": "^2.0.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.2.3",
     "load-grunt-tasks": "^3.5.2",
     "yo": "^2.0.0"
   },
