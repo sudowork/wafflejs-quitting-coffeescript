@@ -16,6 +16,7 @@ module.exports = {
       functions: 'never',
     }],
     'function-paren-newline': 'off',
+    'no-plusplus': 'off',
     // prevents step-down code style, so disable it for functions and classes
     'no-use-before-define': ['error', {
       functions: false,
