@@ -29,10 +29,10 @@ module.exports = (grunt) ->
                 files: ['Gruntfile.coffee']
                 tasks: ['coffeelint']
 
-            jshint:
-                files: ['js/*.js']
-                tasks: ['jshint']
-        
+            eslint:
+                files: ['js/**/*.js']
+                tasks: ['eslint']
+
             sass:
                 files: ['css/source/theme.scss']
                 tasks: ['sass']
@@ -42,7 +42,7 @@ module.exports = (grunt) ->
             theme:
                 files:
                     'css/theme.css': 'css/source/theme.scss'
-        
+
         connect:
 
             livereload:
@@ -62,12 +62,8 @@ module.exports = (grunt) ->
 
             all: ['Gruntfile.coffee']
 
-        jshint:
-
-            options:
-                jshintrc: '.jshintrc'
-
-            all: ['js/*.js']
+        eslint:
+            all: ['js/**/*.js']
 
         copy:
 
@@ -89,7 +85,7 @@ module.exports = (grunt) ->
                     filter: 'isFile'
                 }]
 
-        
+
         buildcontrol:
 
             options:
@@ -101,7 +97,7 @@ module.exports = (grunt) ->
                 options:
                     remote: '<%= pkg.repository.url %>'
                     branch: 'gh-pages'
-        
+
 
 
     # Load all grunt tasks.
@@ -126,7 +122,7 @@ module.exports = (grunt) ->
     grunt.registerTask 'test',
         '*Lint* javascript and coffee files.', [
             'coffeelint'
-            'jshint'
+            'eslint'
         ]
 
     grunt.registerTask 'serve',
@@ -145,13 +141,13 @@ module.exports = (grunt) ->
             'copy'
         ]
 
-    
+
     grunt.registerTask 'deploy',
         'Deploy to Github Pages', [
             'dist'
             'buildcontrol'
         ]
-    
+
 
     # Define default task.
     grunt.registerTask 'default', [
