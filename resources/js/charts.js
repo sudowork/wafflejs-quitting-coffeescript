@@ -1,5 +1,55 @@
 const DATE_REGEX = /\d{4}-\d{2}-\d{2}/;
 const CAFFEINE_PER_CUP = 95;
+const HC_ELEMENTARY_THEME = {
+  "colors": [
+    "#FA8832",
+    "#41B5E9",
+    "#34393C",
+    "#E46151"
+  ],
+  "chart": {
+    "style": {
+      "color": "#333",
+      "fontFamily": "Open Sans"
+    }
+  },
+  "title": {
+    "style": {
+      "fontFamily": "Raleway",
+      "fontWeight": "100"
+    }
+  },
+  "subtitle": {
+    "style": {
+      "fontFamily": "Raleway",
+      "fontWeight": "100"
+    }
+  },
+  "legend": {
+    "align": "right",
+    "verticalAlign": "bottom"
+  },
+  "xAxis": {
+    "gridLineWidth": 1,
+    "gridLineColor": "#F3F3F3",
+    "lineColor": "#F3F3F3",
+    "minorGridLineColor": "#F3F3F3",
+    "tickColor": "#F3F3F3",
+    "tickWidth": 1
+  },
+  "yAxis": {
+    "gridLineColor": "#F3F3F3",
+    "lineColor": "#F3F3F3",
+    "minorGridLineColor": "#F3F3F3",
+    "tickColor": "#F3F3F3",
+    "tickWidth": 1
+  }
+};
+
+function useTheme(theme) {
+  Highcharts.theme = theme;
+  Highcharts.setOptions(Highcharts.theme);
+}
 
 function initCaffeineConsumptionChart() {
   const data = parseSeparatedValues(`
@@ -122,4 +172,5 @@ function getSeries(data, seriesName) {
   return data.map(row => row[seriesName]);
 }
 
+onLoad(() => useTheme(HC_ELEMENTARY_THEME));
 onLoad(initCaffeineConsumptionChart);
