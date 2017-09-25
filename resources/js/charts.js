@@ -95,17 +95,17 @@ function initCaffeineConsumptionChart() {
       },
       {
         title: {
-          text: 'Sleep (hours)'
-        },
-        opposite: true,
-        max: 12,
-      },
-      {
-        title: {
           text: 'Energy'
         },
         opposite: true,
         max: 10,
+      },
+      {
+        title: {
+          text: 'Sleep (hours)'
+        },
+        opposite: true,
+        max: 12,
       },
     ],
     tooltip: {
@@ -119,14 +119,14 @@ function initCaffeineConsumptionChart() {
         type: 'column',
       },
       {
-        name: 'Sleep',
-        data: sleep,
+        name: 'Energy',
+        data: energy,
         yAxis: 1,
         type: 'spline',
       },
       {
-        name: 'Energy',
-        data: energy,
+        name: 'Sleep',
+        data: sleep,
         yAxis: 2,
         type: 'spline',
       },
