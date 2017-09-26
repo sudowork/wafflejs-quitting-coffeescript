@@ -144,6 +144,93 @@
     });
   }
 
+  function initPullRequestChart() {
+    /* eslint-disable no-tabs */
+    const data = parseSeparatedValues(`
+      Date	Language	# PRs
+      2012Q2	JavaScript	16411
+      2012Q2	CoffeeScript	793
+      2012Q3	JavaScript	20283
+      2012Q3	CoffeeScript	1029
+      2012Q4	JavaScript	22485
+      2012Q4	CoffeeScript	1133
+      2013Q1	JavaScript	33897
+      2013Q1	CoffeeScript	1939
+      2013Q2	JavaScript	39445
+      2013Q2	CoffeeScript	1877
+      2013Q3	JavaScript	48213
+      2013Q3	CoffeeScript	2510
+      2013Q4	JavaScript	61846
+      2013Q4	CoffeeScript	4156
+      2014Q1	JavaScript	84127
+      2014Q1	CoffeeScript	6171
+      2014Q2	JavaScript	97564
+      2014Q2	CoffeeScript	7376
+      2014Q3	JavaScript	115824
+      2014Q3	CoffeeScript	8098
+      2014Q4	JavaScript	129554
+      2014Q4	CoffeeScript	7624
+      2015Q1	JavaScript	171489
+      2015Q1	CoffeeScript	9467
+      2015Q2	JavaScript	198108
+      2015Q2	CoffeeScript	10596
+      2015Q3	JavaScript	236531
+      2015Q3	CoffeeScript	11484
+      2015Q4	JavaScript	299806
+      2015Q4	CoffeeScript	11647
+      2016Q1	JavaScript	382098
+      2016Q1	CoffeeScript	12394
+      2016Q2	JavaScript	409880
+      2016Q2	CoffeeScript	12444
+      2016Q3	JavaScript	406803
+      2016Q3	CoffeeScript	10328
+      2016Q4	JavaScript	419758
+      2016Q4	CoffeeScript	12013
+      2017Q1	JavaScript	383738
+      2017Q1	CoffeeScript	11273
+      2017Q2	JavaScript	422653
+      2017Q2	CoffeeScript	8910
+    `);
+    /* eslint-enable no-tabs */
+    const jsRows = data.filter(row => row.Language === 'JavaScript');
+    const jsCount = getSeries(jsRows, '# PRs');
+    const csRows = data.filter(row => row.Language === 'CoffeeScript');
+    const csCount = getSeries(csRows, '# PRs');
+    const dates = getSeries(jsRows, 'Date');
+
+    Highcharts.chart('chart-pull-requests', {
+      chart: {
+        type: 'xy',
+      },
+      title: { style: { display: 'none' } },
+      xAxis: {
+        categories: dates,
+        crosshair: true,
+      },
+      yAxis: {
+        title: {
+          text: 'Pull Requests (log)',
+        },
+        type: 'logarithmic',
+      },
+      tooltip: {
+        shared: true,
+      },
+      series: [
+        {
+          name: 'CoffeeScript',
+          data: csCount,
+          type: 'spline',
+        },
+        {
+          name: 'JavaScript',
+          data: jsCount,
+          type: 'spline',
+        },
+      ],
+    });
+  }
+
   // Not a fully fledged out parser
   function parseSeparatedValues(data, delimiter = '\t') {
     const lines = data
@@ -184,4 +271,5 @@
 
   onLoad(() => useTheme(HC_ELEMENTARY_THEME));
   onLoad(initCaffeineConsumptionChart);
+  onLoad(initPullRequestChart);
 }());

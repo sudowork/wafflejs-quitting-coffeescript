@@ -46,7 +46,9 @@ note:
 
 ===
 
-TODO: JavaScript vs CoffeeScript PR stats chart
+## Pull Requests by Language
+
+<div id="chart-pull-requests"></div>
 
 note:
 - Give nod to CoffeeScript 2
