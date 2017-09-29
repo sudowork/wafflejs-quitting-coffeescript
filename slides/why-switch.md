@@ -62,6 +62,8 @@ Also see [ESTree](https://github.com/estree/estree) for the specification
 note:
 - Allows you to explore the AST
 
+<!-- TODO: Move this to results section -->
+
 ===
 
 ### Editors/IDEs
@@ -109,3 +111,5 @@ note:
 note:
 - Tying back to community
 - Lots of quality learning material readily accessible for free
+
+<!-- TODO: Real problems -->
