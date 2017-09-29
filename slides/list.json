@@ -20,5 +20,12 @@
             "data-separator": "^\n===\n",
             "data-separator-vertical": "^\n---\n"
         }
+    },
+    {
+        "filename": "before-going-cold-turkey.md",
+        "attr": {
+            "data-separator": "^\n===\n",
+            "data-separator-vertical": "^\n---\n"
+        }
     }
 ]
