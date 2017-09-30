@@ -134,3 +134,14 @@ FooSearchService = (function(_super) {
 
 })(AbstractService);
 ```
+
+===
+
+## Our WebApp Codebase
+
+~200,000 Lines of CoffeeScript
+
+~1,400 CoffeeScript Files
+
+note:
+- At the time we decided to make the switch

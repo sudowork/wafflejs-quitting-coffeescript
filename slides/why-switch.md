@@ -1,14 +1,3 @@
-## Our WebApp Codebase
-
-~200,000 Lines of CoffeeScript
-
-~1,400 CoffeeScript Files
-
-note:
-- At the time we decided to make the switch
-
-===
-
 # So Why Switch?
 
 note:
@@ -46,7 +35,9 @@ note:
 
 ===
 
-TODO: JavaScript vs CoffeeScript PR stats chart
+## Pull Requests by Language
+
+<div id="chart-pull-requests"></div>
 
 note:
 - Give nod to CoffeeScript 2
@@ -70,6 +61,8 @@ Also see [ESTree](https://github.com/estree/estree) for the specification
 
 note:
 - Allows you to explore the AST
+
+<!-- TODO: Move this to results section -->
 
 ===
 
@@ -118,3 +111,5 @@ note:
 note:
 - Tying back to community
 - Lots of quality learning material readily accessible for free
+
+<!-- TODO: Real problems -->

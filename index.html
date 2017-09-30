@@ -15,6 +15,7 @@
 
         <link rel="stylesheet" href="css/theme.css" id="theme">
 
+        <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
 
         <!-- For syntax highlighting -->
         <link rel="stylesheet" href="bower_components/highlightjs/styles/solarized_light.css">
@@ -31,6 +32,21 @@
         <!--[if lt IE 9]>
         <script src="bower_components/reveal.js/lib/js/html5shiv.js"></script>
         <![endif]-->
+
+        <script>
+            (function() {
+                window.onLoad = function(callback) {
+                    if (isAlreadyLoaded()) {
+                        setTimeout(callback, 0);
+                    } else {
+                        window.addEventListener('load', callback);
+                    }
+                };
+                function isAlreadyLoaded() {
+                    return document.readyState === 'complete';
+                }
+            }());
+        </script>
     </head>
 
     <body>
@@ -84,6 +100,18 @@
                     
                     
                 
+                    
+                        
+    <section data-separator="^
+===
+" data-separator-vertical="^
+---
+" data-markdown="slides/before-going-cold-turkey.md"></section>
+
+
+                    
+                    
+                
             </div>
 
         </div>
@@ -116,6 +144,7 @@
 
         </script>
         <script src="bower_components/highcharts/highcharts.js"></script>
+        <script src="js/charts.js"></script>
     </body>
 
 </html>
