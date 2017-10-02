@@ -17,15 +17,6 @@ note:
 
 ===
 
-### TC39
-
-![TC39 GitHub Stats](resources/img/slides/tc39.png)
-
-note:
-- Introduce changes to the ECMAScript spec in a somewhat agreed upon way
-
-===
-
 ![State of JavaScript 2016 Flavors Results](resources/img/slides/state-of-js-flavors.png)
 
 Credit: [State of JavaScript 2016](http://stateofjs.com/2016/flavors/)
@@ -41,6 +32,22 @@ note:
 
 note:
 - Give nod to CoffeeScript 2
+
+===
+
+### TC39
+
+![TC39 GitHub Stats](resources/img/slides/tc39.png)
+
+note:
+- Part of what's moving JavaScript forward is TC39 and the proposal process
+- Introduce changes to the ECMAScript spec in a somewhat agreed upon way
+
+===
+
+### Standardization
+
+![Kangax ES2015 Compatibility Table](resources/img/slides/kangax.png)
 
 ===
 
@@ -95,12 +102,6 @@ note:
 - Bundlers utilize ES2015 module spec
   - Code splitting
   - Code liveness
-
-===
-
-### Standardization
-
-![Kangax ES2015 Compatibility Table](resources/img/slides/kangax.png)
 
 ===
 
