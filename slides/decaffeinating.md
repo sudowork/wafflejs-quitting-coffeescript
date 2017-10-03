@@ -21,7 +21,6 @@ function Foo() {
   return Foo.__super__.constructor.apply(this, arguments);
 }
 ```
-![Layered Onion](resources/img/slides/layeredonion.jpg)
 
 note:
 - Because converted CoffeeScript files produce ES5 classes that can't extend ES6 classes
