@@ -136,6 +136,7 @@
   }
 
   function getCaffeineConsumptionData() {
+    // TODO: Fill in last day of data
     /* eslint-disable no-tabs */
     return parseSeparatedValues(`
       Date	Energy	Sleep (hours)	Total Caffeine (mg)
