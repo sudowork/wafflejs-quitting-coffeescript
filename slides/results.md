@@ -2,9 +2,9 @@
 
 ===
 
-<div id="chart-lines-of-code"></div>
+## Real Lines of Code
 
-TODO: Insert lines of code chart here
+<div id="chart-lines-of-code"></div>
 
 ===
 
