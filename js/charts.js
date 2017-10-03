@@ -57,26 +57,17 @@
     Highcharts.setOptions(Highcharts.theme);
   }
 
-  function initCaffeineConsumptionChart() {
-    /* eslint-disable no-tabs */
-    const data = parseSeparatedValues(`
-      Date	Energy	Sleep (hours)	Total Caffeine (mg)
-      2017-09-06		5.43
-      2017-09-07	6	6.00	663
-      2017-09-08	7	5.90	807
-      2017-09-09	5		403.75
-      2017-09-10	4		290
-      2017-09-11	6		520
-      2017-09-12	4	3.78	622.5
-      2017-09-13	5	6.27	617
-      2017-09-14	6	5.58	715
-      2017-09-15	3	6.85	424
-      2017-09-16	6	11.43	190
-      2017-09-17	6	10.67	0
-      2017-09-18	6	6.33	552
-      2017-09-19	5	5.43	841
-    `);
-    /* eslint-enable no-tabs */
+  function initCaffeineConsumptionChartBefore() {
+    const data = getCaffeineConsumptionData().slice(0, 14);
+    initCaffeineConsumptionChart('chart-caffeine-consumption', data);
+  }
+
+  function initCaffeineConsumptionChartAfter() {
+    const data = getCaffeineConsumptionData();
+    initCaffeineConsumptionChart('chart-caffeine-consumption-after', data);
+  }
+
+  function initCaffeineConsumptionChart(chartId, data) {
     const dates = getSeries(data, 'Date');
     const totalCaffeine = getSeries(data, 'Total Caffeine (mg)');
     const cupsOfCoffee = totalCaffeine.map(caffeine =>
@@ -85,7 +76,7 @@
     const sleep = getSeries(data, 'Sleep (hours)');
     const energy = getSeries(data, 'Energy');
 
-    Highcharts.chart('chart-caffeine-consumption', {
+    Highcharts.chart(chartId, {
       chart: {
         type: 'xy',
       },
@@ -142,6 +133,43 @@
         },
       ],
     });
+  }
+
+  function getCaffeineConsumptionData() {
+    /* eslint-disable no-tabs */
+    return parseSeparatedValues(`
+      Date	Energy	Sleep (hours)	Total Caffeine (mg)
+      2017-09-06		5.43
+      2017-09-07	6	6.00	663
+      2017-09-08	7	5.90	807
+      2017-09-09	5		403.75
+      2017-09-10	4		290
+      2017-09-11	6		520
+      2017-09-12	4	3.78	622.5
+      2017-09-13	5	6.27	617
+      2017-09-14	6	5.58	715
+      2017-09-15	3	6.85	424
+      2017-09-16	6	11.43	190
+      2017-09-17	6	10.67	0
+      2017-09-18	6	6.33	552
+      2017-09-19	5	5.43	841
+      2017-09-20	3	7.73	14
+      2017-09-21	4	5.70	0
+      2017-09-22	5	7.63	0
+      2017-09-23	6	10.03	0
+      2017-09-24	6	5.92	0
+      2017-09-25	5	1.75	0
+      2017-09-26	7	7.68	14
+      2017-09-27	7	7.42	0
+      2017-09-28	7	7.32	0
+      2017-09-29	7	6.67	0
+      2017-09-30	8	9.98	0
+      2017-10-01	7	5.82	0
+      2017-10-02	8	5.28	14
+      2017-10-03	6	4.68	0
+      2017-10-04			0
+    `);
+    /* eslint-enable no-tabs */
   }
 
   function initPullRequestChart() {
@@ -270,6 +298,7 @@
   }
 
   onLoad(() => useTheme(HC_ELEMENTARY_THEME));
-  onLoad(initCaffeineConsumptionChart);
+  onLoad(initCaffeineConsumptionChartBefore);
   onLoad(initPullRequestChart);
+  onLoad(initCaffeineConsumptionChartAfter);
 }());

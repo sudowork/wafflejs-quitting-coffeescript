@@ -59,12 +59,15 @@ note:
 
 ===
 
-TODO: Cutting out Caffeine graph
+## Inspiration
+
+<div id="chart-caffeine-consumption-after"></div>
 
 note:
 - Sucked at first
 - More steady energy levels
 - Waking up with more energy, even naturaly waking up at 6 some days
+- Averaging almost the same amount of sleep, though a bit more regular
 
 ===
 
