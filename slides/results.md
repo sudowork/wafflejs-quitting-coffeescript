@@ -52,7 +52,7 @@ note:
 
 ===
 
-TODO: Demo gif
+<div id="bulk-decaffeinate-demo"></div>
 
 note:
 - Ironically can't seem to get away from it

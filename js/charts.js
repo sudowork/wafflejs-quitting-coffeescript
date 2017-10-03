@@ -297,8 +297,17 @@
     return data.map(row => row[seriesName]);
   }
 
+  function initBulkDecaffeinateDemo() {
+    const script = document.createElement('script');
+    script.src = 'https://asciinema.org/a/NJRer9YOAOiuKZPZG6TY2uuS3.js';
+    script.id = 'asciicast-NJRer9YOAOiuKZPZG6TY2uuS3';
+    script.async = true;
+    document.getElementById('bulk-decaffeinate-demo').appendChild(script);
+  }
+
   onLoad(() => useTheme(HC_ELEMENTARY_THEME));
   onLoad(initCaffeineConsumptionChartBefore);
   onLoad(initPullRequestChart);
   onLoad(initCaffeineConsumptionChartAfter);
+  onLoad(initBulkDecaffeinateDemo);
 }());
