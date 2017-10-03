@@ -55,21 +55,7 @@ note:
 
 note:
 - Many of these rely on static analysis (analyzing Abstract Syntax Tree), not to say you can't statically analyze CoffeeScript
-  - AST is just a fancy way of describing a program
 - But there's just a lack of tooling/community around it in comparison
-
-===
-
-### [AST Explorer](https://astexplorer.net)
-
-<img src="resources/img/slides/astexplorer.png" alt="AST Explorer Screenshot" width="60%">
-
-Also see [ESTree](https://github.com/estree/estree) for the specification
-
-note:
-- Allows you to explore the AST
-
-<!-- TODO: Move this to results section -->
 
 ===
 
