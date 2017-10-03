@@ -27,5 +27,19 @@
             "data-separator": "^\n===\n",
             "data-separator-vertical": "^\n---\n"
         }
+    },
+    {
+        "filename": "decaffeinating.md",
+        "attr": {
+            "data-separator": "^\n===\n",
+            "data-separator-vertical": "^\n---\n"
+        }
+    },
+    {
+        "filename": "results.md",
+        "attr": {
+            "data-separator": "^\n===\n",
+            "data-separator-vertical": "^\n---\n"
+        }
     }
 ]

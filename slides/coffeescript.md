@@ -67,7 +67,7 @@ class FooSearchService extends AbstractService
 <h3 class="horizontal-flip">🍭🍩🍪🍫🍬🌈🤢</h3>
 
 ```coffeescript
-{mapLimit} = require('async')
+{mapLimit} = require 'async'
 class FooSearchService extends AbstractService
   performSearches: (queries, cb) ->
     search = (query, done) => @_search query, done
