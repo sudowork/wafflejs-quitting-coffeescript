@@ -84,6 +84,13 @@ note:
 
 ===
 
+<div id="bulk-decaffeinate-demo"></div>
+
+note:
+- Ironically can't seem to get away from it
+
+===
+
 ## Dealing with Bound Subclass Methods
 
 ```coffeescript
