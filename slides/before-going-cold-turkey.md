@@ -50,38 +50,81 @@ note:
 - In addition to knowing how much effort it will take, you need to convince your team and get buy-in
 - Get people excited about modern JavaScript
 - In other words, inception
+- Here are some ideas to try
 
 ===
 
-### Some Ideas to Try
-
-<!-- TODO: Break this up into separate slides -->
-
-- Host a [Lunch & Learn](https://jsbin.com/vipugul/34/edit?js,console,output)
-- Identify real problems
-- Establish a ES2015+ [style guide](https://github.com/airbnb/javascript)
-- Show the developer experience
-- Do a proof of concept
-- Provide [documentation](http://eng.datafox.com/javascript/2017/07/18/decaffeinating-large-coffeescript-codebase/#step-by-step-instructions-for-converting-a-project)
-- Subscribe and share [JavaScript Weekly](http://javascriptweekly.com/) articles
+### Host a [Lunch & Learn](https://jsbin.com/vipugul/34/edit?js,console,output)
 
 note:
-- Host a lunch and learn on modern JS for your team
-  - I've linked to the one I presented (months before converting)
-- Real problems
-  - Failed tests due to compilation
-  - Test stack traces
-  - Ember-cli support for CS
-  - Source maps are a pain
-  - Debugging production
-- Style guide
-  - Enforce it using ESLint
-  - Airbnb is a good place to start
-- Show DX
-  - Developers love shiny things
-- Proof of concept
-  - Try converting a smaller, less critical project and run it in production
+- I've linked to the one I presented (months before converting)
+
+===
+
+### Identify real problems
+
+note:
+- Failed tests due to compilation
+- Test stack traces
+- Ember-cli support for CS
+- Source maps are a pain
+- Debugging production
+
+===
+
+### Establish a ES2015+ [style guide](https://github.com/airbnb/javascript)
+
+note:
+- Spend a good amount of time on this, want to be happy with the end result
+- Enforce it using ESLint
+  - Can utilize --fix
+- Airbnb is a good place to start
+
+===
+
+### Show the developer experience
+
+note:
+- Developers love shiny things
 - Provide documentation
-  - Linked to a more public-facing version of our step by step process
-- Subscribe and share JS Weekly
-  - Create a slack channel
+
+===
+
+### Do a proof of concept
+
+note:
+- smaller, less critical project and run it in production
+
+===
+
+### Provide [documentation](http://eng.datafox.com/javascript/2017/07/18/decaffeinating-large-coffeescript-codebase/#step-by-step-instructions-for-converting-a-project)
+
+note:
+- Linked to a more public-facing version of our step by step process
+
+===
+
+### Subscribe/share [JavaScript Weekly](http://javascriptweekly.com/) articles
+
+<img
+  src="resources/img/slides/slack-javascript.png"
+  alt="Starting the #javascript Slack channel"
+  width="70%"
+>
+
+<img
+  class="fragment"
+  src="resources/img/slides/slack-javascript-start.png"
+  alt="Response to creating channel"
+  width="70%"
+>
+
+<img
+  class="fragment"
+  src="resources/img/slides/slack-javascript-present.png"
+  alt="Catching on"
+  width="70%"
+>
+
+note:
+- Create a slack channel
