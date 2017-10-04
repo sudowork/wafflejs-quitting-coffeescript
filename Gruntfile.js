@@ -1,156 +1,193 @@
-# Generated on 2017-09-15 using generator-reveal 1.0.0
-module.exports = (grunt) ->
+/*
+ * decaffeinate suggestions:
+ * DS102: Remove unnecessary code created because of implicit returns
+ * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
+ */
+// Generated on 2017-09-15 using generator-reveal 1.0.0
+module.exports = function(grunt) {
 
-    grunt.initConfig
-        pkg: grunt.file.readJSON 'package.json'
+    grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
 
-        watch:
+        watch: {
 
-            livereload:
-                options:
+            livereload: {
+                options: {
                     livereload: true
+                },
                 files: [
-                    'index.html'
-                    'slides/{,*/}*.{md,html}'
-                    'js/*.js'
-                    'css/*.css'
+                    'index.html',
+                    'slides/{,*/}*.{md,html}',
+                    'js/*.js',
+                    'css/*.css',
                     'resources/**'
                 ]
+            },
 
-            index:
+            index: {
                 files: [
-                    'templates/_index.html'
-                    'templates/_section.html'
+                    'templates/_index.html',
+                    'templates/_section.html',
                     'slides/list.json'
-                ]
+                ],
                 tasks: ['buildIndex']
+            },
 
-            coffeelint:
-                files: ['Gruntfile.coffee']
+            coffeelint: {
+                files: ['Gruntfile.coffee'],
                 tasks: ['coffeelint']
+            },
 
-            eslint:
-                files: ['js/**/*.js']
+            eslint: {
+                files: ['js/**/*.js'],
                 tasks: ['eslint']
+            },
 
-            sass:
-                files: ['css/source/theme.scss']
+            sass: {
+                files: ['css/source/theme.scss'],
                 tasks: ['sass']
+            }
+        },
 
-        sass:
+        sass: {
 
-            theme:
-                files:
+            theme: {
+                files: {
                     'css/theme.css': 'css/source/theme.scss'
+                }
+            }
+        },
 
-        connect:
+        connect: {
 
-            livereload:
-                options:
-                    port: 9000
-                    base: '.'
-                    open: true
+            livereload: {
+                options: {
+                    port: 9000,
+                    base: '.',
+                    open: true,
                     livereload: true
+                }
+            }
+        },
 
-        coffeelint:
+        coffeelint: {
 
-            options:
-                indentation:
+            options: {
+                indentation: {
                     value: 4
-                max_line_length:
+                },
+                max_line_length: {
                     level: 'ignore'
+                }
+            },
 
             all: ['Gruntfile.coffee']
+        },
 
-        eslint:
+        eslint: {
             all: ['js/**/*.js']
+        },
 
-        copy:
+        copy: {
 
-            dist:
+            dist: {
                 files: [{
-                    expand: true
+                    expand: true,
                     src: [
-                        'slides/**'
-                        'bower_components/**'
-                        'js/**'
-                        'css/*.css'
+                        'slides/**',
+                        'bower_components/**',
+                        'js/**',
+                        'css/*.css',
                         'resources/**'
-                    ]
+                    ],
                     dest: 'dist/'
                 },{
-                    expand: true
-                    src: ['index.html']
-                    dest: 'dist/'
+                    expand: true,
+                    src: ['index.html'],
+                    dest: 'dist/',
                     filter: 'isFile'
                 }]
+            }
+        },
 
 
-        buildcontrol:
+        buildcontrol: {
 
-            options:
-                dir: 'dist'
-                commit: true
-                push: true
+            options: {
+                dir: 'dist',
+                commit: true,
+                push: true,
                 message: 'Built from %sourceCommit% on branch %sourceBranch%'
-            pages:
-                options:
-                    remote: '<%= pkg.repository.url %>'
+            },
+            pages: {
+                options: {
+                    remote: '<%= pkg.repository.url %>',
                     branch: 'gh-pages'
+                }
+            }
+        }
+    });
 
 
 
-    # Load all grunt tasks.
-    require('load-grunt-tasks')(grunt)
+    // Load all grunt tasks.
+    require('load-grunt-tasks')(grunt);
 
-    grunt.registerTask 'buildIndex',
+    grunt.registerTask('buildIndex',
         'Build index.html from templates/_index.html and slides/list.json.',
-        ->
-            indexTemplate = grunt.file.read 'templates/_index.html'
-            sectionTemplate = grunt.file.read 'templates/_section.html'
-            slides = grunt.file.readJSON 'slides/list.json'
+        function() {
+            const indexTemplate = grunt.file.read('templates/_index.html');
+            const sectionTemplate = grunt.file.read('templates/_section.html');
+            const slides = grunt.file.readJSON('slides/list.json');
 
-            html = grunt.template.process indexTemplate, data:
-                slides:
-                    slides
-                section: (slide) ->
-                    grunt.template.process sectionTemplate, data:
-                        slide:
-                            slide
-            grunt.file.write 'index.html', html
+            const html = grunt.template.process(indexTemplate, { data: {
+                slides,
+                section(slide) {
+                    return grunt.template.process(sectionTemplate, { data: {
+                        slide
+                    }
+                }
+                    );
+                }
+            }
+        }
+            );
+            return grunt.file.write('index.html', html);
+    });
 
-    grunt.registerTask 'test',
+    grunt.registerTask('test',
         '*Lint* javascript and coffee files.', [
-            'coffeelint'
+            'coffeelint',
             'eslint'
-        ]
+        ]);
 
-    grunt.registerTask 'serve',
+    grunt.registerTask('serve',
         'Run presentation locally and start watch process (living document).', [
-            'buildIndex'
-            'sass'
-            'connect:livereload'
+            'buildIndex',
+            'sass',
+            'connect:livereload',
             'watch'
-        ]
+        ]);
 
-    grunt.registerTask 'dist',
+    grunt.registerTask('dist',
         'Save presentation files to *dist* directory.', [
-            'test'
-            'sass'
-            'buildIndex'
+            'test',
+            'sass',
+            'buildIndex',
             'copy'
-        ]
+        ]);
 
 
-    grunt.registerTask 'deploy',
+    grunt.registerTask('deploy',
         'Deploy to Github Pages', [
-            'dist'
+            'dist',
             'buildcontrol'
-        ]
+        ]);
 
 
-    # Define default task.
-    grunt.registerTask 'default', [
-        'test'
+    // Define default task.
+    return grunt.registerTask('default', [
+        'test',
         'serve'
-    ]
+    ]);
+};
