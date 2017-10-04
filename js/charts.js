@@ -1,4 +1,4 @@
-/* global Highcharts, onLoad */
+/* global Highcharts, Reveal, onLoad */
 
 // eslint-disable-next-line func-names
 (function initCharts() {
@@ -551,6 +551,34 @@
     return data.map(row => row[seriesName]);
   }
 
+  function initBulkDecaffeinateDemoWhenReady() {
+    let alreadyLoaded = false;
+    if (isDemoSlideInVicinity(Reveal.getState().indexh)) {
+      alreadyLoaded = true;
+      initBulkDecaffeinateDemo();
+      return;
+    }
+    Reveal.addEventListener('slidechanged', ({ indexh: currentSlideIndex }) => {
+      if (alreadyLoaded) return;
+      if (isDemoSlideInVicinity(currentSlideIndex)) {
+        alreadyLoaded = true;
+        initBulkDecaffeinateDemo();
+      }
+    });
+  }
+
+  function isDemoSlideInVicinity(currentSlideIndex) {
+    const isDemo = slide => !!slide.querySelector('#bulk-decaffeinate-demo');
+    const currentSlide = Reveal.getSlide(currentSlideIndex);
+    const previousSlide = Reveal.getSlide(currentSlideIndex - 1);
+    const nextSlide = Reveal.getSlide(currentSlideIndex + 1);
+    return (
+      (isDemo(currentSlide)) ||
+      (previousSlide && isDemo(previousSlide)) ||
+      (nextSlide && isDemo(nextSlide))
+    );
+  }
+
   function initBulkDecaffeinateDemo() {
     const script = document.createElement('script');
     script.src = 'https://asciinema.org/a/NJRer9YOAOiuKZPZG6TY2uuS3.js';
@@ -568,5 +596,5 @@
   onLoad(initPullRequestChart);
   onLoad(initCaffeineConsumptionChartAfter);
   onLoad(initLinesOfCodeChart);
-  onLoad(initBulkDecaffeinateDemo);
+  onLoad(initBulkDecaffeinateDemoWhenReady);
 }());
