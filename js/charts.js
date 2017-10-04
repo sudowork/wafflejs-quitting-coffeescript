@@ -554,6 +554,10 @@
   function initBulkDecaffeinateDemo() {
     const script = document.createElement('script');
     script.src = 'https://asciinema.org/a/NJRer9YOAOiuKZPZG6TY2uuS3.js';
+    script.setAttribute('data-theme', 'solarized-light');
+    script.setAttribute('data-speed', '3');
+    script.setAttribute('data-cols', '125');
+    script.setAttribute('data-rows', '35');
     script.id = 'asciicast-NJRer9YOAOiuKZPZG6TY2uuS3';
     script.async = true;
     document.getElementById('bulk-decaffeinate-demo').appendChild(script);
