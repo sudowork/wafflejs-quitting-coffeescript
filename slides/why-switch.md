@@ -81,8 +81,6 @@ note:
 - Type Checking: [flow](https://flow.org/), [Tern.js](http://ternjs.net/), [TypeScript](https://www.typescriptlang.org/)
 - Bundlers: [Webpack](https://webpack.js.org/), [Rollup](https://rollupjs.org/)
 
-<!-- TODO: Consider splitting these out into their own slides with graphics? -->
-
 note:
 - TypeScript is used by VSCode for type inference + type definitions
 - Bundlers utilize ES2015 module spec
@@ -98,5 +96,3 @@ note:
 note:
 - Tying back to community
 - Lots of quality learning material readily accessible for free
-
-<!-- TODO: Real problems -->
