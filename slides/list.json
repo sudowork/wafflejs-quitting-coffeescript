@@ -41,5 +41,6 @@
             "data-separator": "^\n===\n",
             "data-separator-vertical": "^\n---\n"
         }
-    }
+    },
+    "endcard.md"
 ]

@@ -136,6 +136,14 @@
                     
                     
                 
+                    
+                        
+    <section data-markdown="slides/endcard.md"></section>
+
+
+                    
+                    
+                
             </div>
 
         </div>
@@ -143,7 +151,6 @@
         <script src="bower_components/reveal.js/lib/js/head.min.js"></script>
         <script src="bower_components/reveal.js/js/reveal.js"></script>
         <script>
-
           // Full list of configuration options available at:
           // https://github.com/hakimel/reveal.js#configuration
           Reveal.initialize({
@@ -162,13 +169,13 @@
               { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( '[data-html]' ) || !!document.querySelector( 'pre code' ) || !!document.querySelector( '[data-markdown]' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
               { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
               { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true },
-              { src: 'js/loadhtmlslides.js', condition: function() { return !!document.querySelector( '[data-html]' ); } }
+              { src: 'bower_components/highcharts/highcharts.js', async: true },
+              { src: 'js/loadhtmlslides.js', condition: function() { return !!document.querySelector( '[data-html]' ); } },
+              { src: 'js/charts.js' },
+              { src: 'js/demo.js' },
             ]
           });
-
         </script>
-        <script src="bower_components/highcharts/highcharts.js"></script>
-        <script src="js/charts.js"></script>
     </body>
 
 </html>
