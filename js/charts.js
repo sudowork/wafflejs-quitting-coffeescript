@@ -136,7 +136,6 @@
   }
 
   function getCaffeineConsumptionData() {
-    // TODO: Fill in last day of data
     /* eslint-disable no-tabs */
     return parseSeparatedValues(`
       Date	Energy	Sleep (hours)	Total Caffeine (mg)
@@ -168,7 +167,7 @@
       2017-10-01	7	5.82	0
       2017-10-02	8	5.28	14
       2017-10-03	6	4.68	0
-      2017-10-04			0
+      2017-10-04	7	5.63	0
     `);
     /* eslint-enable no-tabs */
   }
