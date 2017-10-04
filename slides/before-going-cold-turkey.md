@@ -106,5 +106,25 @@ note:
 
 ### Subscribe/share [JavaScript Weekly](http://javascriptweekly.com/) articles
 
+<img
+  src="resources/img/slides/slack-javascript.png"
+  alt="Starting the #javascript Slack channel"
+  width="70%"
+>
+
+<img
+  class="fragment"
+  src="resources/img/slides/slack-javascript-start.png"
+  alt="Response to creating channel"
+  width="70%"
+>
+
+<img
+  class="fragment"
+  src="resources/img/slides/slack-javascript-present.png"
+  alt="Catching on"
+  width="70%"
+>
+
 note:
 - Create a slack channel
