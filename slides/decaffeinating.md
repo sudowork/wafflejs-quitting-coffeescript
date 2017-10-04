@@ -64,23 +64,17 @@ note:
 
 ## [`decaffeinate`](http://decaffeinate-project.org/)
 
+## [ESLint](https://eslint.org/)
+
+## [`jscodeshift`](https://github.com/facebook/jscodeshift)
+
+## [`bulk-decaffeinate`](https://github.com/decaffeinate/bulk-decaffeinate)
+
 note:
 - Fully automated conversion
 - For things it can't fix, tips on how to fix it
 - Preserve whitespace, formatting
 - Focus on correctness
-
-===
-
-## [ESLint](https://eslint.org/)
-
-===
-
-## [`jscodeshift`](https://github.com/facebook/jscodeshift)
-
-===
-
-## [`bulk-decaffeinate`](https://github.com/decaffeinate/bulk-decaffeinate)
 
 ===
 
