@@ -2,25 +2,6 @@
 
 note:
 - Before we start talking about CoffeeScript
-- Poll Audience, "Does anyone here drink coffee regularly?"
-  - 2, 3, 4, 5?
-- Starbucks Giftcard
-
----
-
-# ☕️☕️?
-
----
-
-# ☕️☕️☕️?
-
----
-
-# ☕️☕️☕️☕️?
-
----
-
-# ☕️☕️☕️☕️☕️?
 
 ===
 
